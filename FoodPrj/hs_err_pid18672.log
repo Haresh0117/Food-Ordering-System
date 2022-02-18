@@ -1,0 +1,142 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 368656 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:389), pid=18672, tid=0x0000000000004c74
+#
+# JRE version:  (8.0_301-b09) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.301-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ac7c3b0000):  JavaThread "Unknown thread" [_thread_in_vm, id=19572, stack(0x0000005292600000,0x0000005292700000)]
+
+Stack: [0x0000005292600000,0x0000005292700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32ed79]
+V  [jvm.dll+0x275722]
+V  [jvm.dll+0x2763cd]
+V  [jvm.dll+0x26ce05]
+V  [jvm.dll+0xd551c]
+V  [jvm.dll+0xd5223]
+V  [jvm.dll+0x7e29c]
+V  [jvm.dll+0xfc566]
+V  [jvm.dll+0x20a057]
+V  [jvm.dll+0x238ae7]
+V  [jvm.dll+0x162876]
+C  [javaw.exe+0x2322]
+C  [javaw.exe+0x16544]
+C  [KERNEL32.DLL+0x154e0]
+C  [ntdll.dll+0x485b]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000001ac7c3b0000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=19572, stack(0x0000005292600000,0x0000005292700000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x000000008a800000, size: 1880 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7cbfc0000 - 0x00007ff7cc007000 	C:\Program Files\Java\jre1.8.0_301\bin\javaw.exe
+0x00007ffbf82e0000 - 0x00007ffbf84e9000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffbf6740000 - 0x00007ffbf67fd000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffbf5c30000 - 0x00007ffbf5fa4000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffbf7bf0000 - 0x00007ffbf7c9e000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffbf6d70000 - 0x00007ffbf6e13000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffbf80c0000 - 0x00007ffbf815e000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffbf6460000 - 0x00007ffbf6580000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffbf7a40000 - 0x00007ffbf7bec000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffbf5ae0000 - 0x00007ffbf5b06000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffbf6280000 - 0x00007ffbf62a9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffbf59c0000 - 0x00007ffbf5ad2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffbf60e0000 - 0x00007ffbf617d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffbf5b10000 - 0x00007ffbf5c21000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffbdf190000 - 0x00007ffbdf435000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22000.120_none_9d947278b86cc467\COMCTL32.dll
+0x00007ffbf61e0000 - 0x00007ffbf6211000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffbe8b30000 - 0x00007ffbe8b45000 	C:\Program Files\Java\jre1.8.0_301\bin\vcruntime140.dll
+0x00007ffbcebe0000 - 0x00007ffbcec7b000 	C:\Program Files\Java\jre1.8.0_301\bin\msvcp140.dll
+0x000000006b570000 - 0x000000006bdd0000 	C:\Program Files\Java\jre1.8.0_301\bin\server\jvm.dll
+0x00007ffbf6450000 - 0x00007ffbf6458000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffbefb60000 - 0x00007ffbefb93000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffbeedf0000 - 0x00007ffbeedfa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffbe7dc0000 - 0x00007ffbe7dc9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffbf7200000 - 0x00007ffbf726f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffbf48d0000 - 0x00007ffbf48e8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffbf1c30000 - 0x00007ffbf1c40000 	C:\Program Files\Java\jre1.8.0_301\bin\verify.dll
+0x00007ffbef7f0000 - 0x00007ffbef81b000 	C:\Program Files\Java\jre1.8.0_301\bin\java.dll
+0x00007ffbf1af0000 - 0x00007ffbf1b08000 	C:\Program Files\Java\jre1.8.0_301\bin\zip.dll
+0x00007ffbf3410000 - 0x00007ffbf3631000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffbf57d0000 - 0x00007ffbf584f000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: Mypack.Menu
+java_class_path (initial): C:\JavaFullStackDevelopment\stsProjects\FoodPrj\target\classes
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_301/bin/server;C:/Program Files/Java/jre1.8.0_301/bin;C:/Program Files/Java/jre1.8.0_301/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Users\Haresh\AppData\Local\Microsoft\WindowsApps;C:\Users\Haresh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_301\bin;C:\Users\Haresh\AppData\Roaming\npm;C:\JavaFullStackDevelopment;;C:\Users\Haresh\Downloads\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32-x86_64\sts-bundle\sts-3.9.6.RELEASE;
+USERNAME=Haresh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 22000 (10.0.22000.434)
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 1 threads per core) family 23 model 104 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 7694920k(327192k free), swap 31812168k(5248k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.301-b09) for windows-amd64 JRE (1.8.0_301-b09), built on Jun  9 2021 06:46:21 by "java_re" with MS VC++ 15.9 (VS2017)
+
+time: Sun Feb 13 12:04:41 2022
+timezone: India Standard Time
+elapsed time: 0.037710 seconds (0d 0h 0m 0s)
+
